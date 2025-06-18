@@ -16,8 +16,20 @@
 - implemented Sign Out 
 - Update prfile
 - Fetch movies from TMDB
-
-
+- Bugfix -> Sign up user displayName and Profile picture update
+- Bugfix -> if the user is not logged in redirect /browse to Login page and vice versa
+- Unsubscribed to the onAuthStateChnaged callback
+- Add hardcoded value to the constant file
+- Register TMDB API &  create an app & get access token
+- Get Data from TMDB now playing movies list API
+- created Custom hook for now paying movies 
+- create MoviesSlice
+- Update Store with movies Data
+- Planning for MainContainer & secndary container
+- fetch data from trailor video
+- Update Store with Trailor Video Data
+- Embedded the youtube video and make it autoplay and mute
+- Tailwind Classes to make container look awesome
 
 # features
 - Login/Sign Up 
@@ -32,7 +44,6 @@
       - movie suggestion
          - movies list * N
 
-
- # NetflixGpt
+# NetflixGpt
   - Search Bar
   - Movie Suggestions
