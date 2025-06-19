@@ -31,8 +31,15 @@
 - Embedded the youtube video and make it autoplay and mute
 - Tailwind Classes to make container look awesome
 - Build secondary component
+- Build movie list
+- Build Movie Card
+- TMDB IMG CDN URL
+- made the Browse page Amzing with Tailwind Css
+- UsePopularMovies Custom Hook
 
 # features
+
+s
 
 - Login/Sign Up
 
@@ -57,6 +64,7 @@ import MovieCard from "./MovieCard";
 const MovieList = ({title, movies}) => {
 if(!movies) return;
 return (
+
 <div className="px-4 md:px-7 w-screen ">
 <p className=" text-white pt-12 md:pt-4 md:text-2xl pb-4">{title}</p>
 <div className=" flex overflow-x-scroll scrollbar-hide">
