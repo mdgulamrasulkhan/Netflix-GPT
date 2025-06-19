@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { API_OPTIONS } from "../../utils/constant"; // ✅ corrected path
-import { addNowPlayingMovies } from "../../utils/moviesSlice"; // ✅ corrected path
+import { API_OPTIONS } from "../utils/constant";
+import { usePopularMovies } from "../utils/moviesSlice";
 
-const useNowPlayingMovies = () => {
+export const usePopularMovies = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,8 +14,10 @@ const useNowPlayingMovies = () => {
           API_OPTIONS
         );
         const json = await response.json();
-        
-        dispatch(addNowPlayingMovies(json.results));
+
+        console.log("**************", json.results);
+
+        dispatch(usePopularMovies(json.results));
       } catch (error) {
         console.error("Failed to fetch now playing movies:", error);
       }
@@ -24,5 +26,3 @@ const useNowPlayingMovies = () => {
     getNowPlayingMovies();
   }, [dispatch]);
 };
-
-export default useNowPlayingMovies;
